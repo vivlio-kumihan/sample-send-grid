@@ -7,10 +7,8 @@ function App() {
   const { TextArea } = Input;
   const [form] = Form.useForm();
 
-  // const sgMail = require('@sendgrid/mail');
-  // sgMail.setApiKey("SG.7D79sCDaQZWwUZwHmiz4Vw.sOH1bVNpZsUUZO_-rNdpNAWe-ra7b2m7dxO9Vuod1SA");
   const sgMail = require('@sendgrid/mail');
-  sgMail.setApiKey('SG.7D79sCDaQZWwUZwHmiz4Vw.sOH1bVNpZsUUZO_-rNdpNAWe-ra7b2m7dxO9Vuod1SA');
+  sgMail.setApiKey(process.env.React_APP_OPENWEATHERMAP_API_KEY);
 
   return (
     <div className="App">
